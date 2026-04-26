@@ -19,7 +19,7 @@
 body {
   font-family: 'Inter', sans-serif;
   background: var(--bg);
-  background-image: url('/living.jpg');
+  background-image: url('/velas-aromaticas/living.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
