@@ -12,12 +12,12 @@ interface Vela {
 }
 
 const velas: Vela[] = [
-  { id: 1, nombre: "Luna Miel", aroma: "Miel y Lavanda", precio: 2500, taille: "Grande", descripcion: "Vela de soja con esencia de miel orgánica y lavanda francesa", color: "#F5DEB3", imagen: "https://images.unsplash.com/photo-1602607203242-17c9dfa4c0f6?w=400&h=300&fit=crop" },
-  { id: 2, nombre: "Bosque Encantado", aroma: "Pino y Eucalipto", precio: 2200, taille: "Mediana", descripcion: "Aromas frescos del bosque patagónico", color: "#228B22", imagen: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=300&fit=crop" },
-  { id: 3, nombre: "Noche de Verano", aroma: "Jazmín y Gardenia", precio: 2800, taille: "Grande", descripcion: "Fragancia floral intensa para noches memorables", color: "#FFB6C1", imagen: "https://images.unsplash.com/photo-1608181831718-2501c55c8e7e?w=400&h=300&fit=crop" },
-  { id: 4, nombre: "Café Vainilla", aroma: "Café y Vainilla", precio: 2100, taille: "Chica", descripcion: "Combinación acogedora de café recién molido", color: "#8B4513", imagen: "https://images.unsplash.com/photo-1603006905393-c7da8488d6c8?w=400&h=300&fit=crop" },
-  { id: 5, nombre: "Cítricos Frescos", aroma: "Limón y Naranja", precio: 1800, taille: "Chica", descripcion: "Refrescante mezcla cítrica revitalizante", color: "#FFD700", imagen: "https://images.unsplash.com/photo-1608581728943-9305d5e3c8c8?w=400&h=300&fit=crop" },
-  { id: 6, nombre: "Veladora Calmada", aroma: "Sándalo y Mirra", precio: 3500, taille: "XL", descripcion: "Vela premium para meditación y relajación", color: "#D2691E", imagen: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=300&fit=crop" },
+  { id: 1, nombre: "Luna Miel", aroma: "Miel y Lavanda", precio: 2500, taille: "Grande", descripcion: "Vela de soja con esencia de miel orgánica y lavanda francesa", color: "#F5DEB3", imagen: "src/imagenes/imagen 1.jpg=400&h=300&fit=crop" },
+  { id: 2, nombre: "Bosque Encantado", aroma: "Pino y Eucalipto", precio: 2200, taille: "Mediana", descripcion: "Aromas frescos del bosque patagónico", color: "#228B22", imagen: "src/imagenes/imagen 2.jpg=400&h=300&fit=crop" },
+  { id: 3, nombre: "Noche de Verano", aroma: "Jazmín y Gardenia", precio: 2800, taille: "Grande", descripcion: "Fragancia floral intensa para noches memorables", color: "#FFB6C1", imagen: "src/imagenes/imagen 3.jpg=400&h=300&fit=crop" },
+  { id: 4, nombre: "Café Vainilla", aroma: "Café y Vainilla", precio: 2100, taille: "Chica", descripcion: "Combinación acogedora de café recién molido", color: "#8B4513", imagen: "src/imagenes/imagen 4.jpg=400&h=300&fit=crop" },
+  { id: 5, nombre: "Cítricos Frescos", aroma: "Limón y Naranja", precio: 1800, taille: "Chica", descripcion: "Refrescante mezcla cítrica revitalizante", color: "#FFD700", imagen: "src/imagenes/imagen 5.jpg=400&h=300&fit=crop" },
+  { id: 6, nombre: "Veladora Calmada", aroma: "Sándalo y Mirra", precio: 3500, taille: "XL", descripcion: "Vela premium para meditación y relajación", color: "#D2691E", imagen: "src/imagenes/imagen 6.jpg=400&h=300&fit=crop" },
 ]
 
 const preciosPorCantidad = [
