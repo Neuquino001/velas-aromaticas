@@ -75,7 +75,12 @@ h1, h2, h3 {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, var(--bg) 0%, var(--bg-alt) 100%);
+  background: linear-gradient(135deg, rgba(255,255,255,0.4) 0%, rgba(255,255,255,0.3) 100%),
+              url('/velas-aromaticas/living.jpg');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
   padding: 6rem 2rem 4rem;
 }
 
