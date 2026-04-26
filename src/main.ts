@@ -113,6 +113,7 @@ const appHTML = `
 
   <footer class="footer">
     <p>© 2026 Velas Essencias - Handmade con ❤</p>
+    <p>Diseñado por Gustavo Genco Contacto: gustavogenconqn@gmail.com</p>
   </footer>
 `
 
