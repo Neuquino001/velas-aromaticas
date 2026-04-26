@@ -8,111 +8,137 @@ interface Vela {
   taille: string
   descripcion: string
   color: string
+  imagen: string
 }
 
 const velas: Vela[] = [
-  { id: 1, nombre: "Luna Miel", aroma: "Miel y Lavanda", precio: 2500, taille: "Grande", descripcion: "Vela de soja con esencia de miel orgánica y lavanda francesa", color: "#F5DEB3" },
-  { id: 2, nombre: "Bosque Encantado", aroma: "Pino y Eucalipto", precio: 2200, taille: "Mediana", descripcion: "Aromas frescos del bosque patagónico", color: "#228B22" },
-  { id: 3, nombre: "Noche de Verano", aroma: "Jazmín y Gardenia", precio: 2800, taille: "Grande", descripcion: "Fragancia floral intensa para noches memorables", color: "#FFB6C1" },
-  { id: 4, nombre: "Café Vainilla", aroma: "Café y Vainilla", precio: 2100, taille: "Chica", descripcion: "Combinación acogedora de café recién molido", color: "#8B4513" },
-  { id: 5, nombre: "Cítricos Frescos", aroma: "Limón y Naranja", precio: 1800, taille: "Chica", descripcion: "Refrescante mezcla cítrica revitalizante", color: "#FFD700" },
-  { id: 6, nombre: "Veladora Calmada", aroma: "Sándalo y Mirra", precio: 3500, taille: "XL", descripcion: "Vela premium para meditación y relajación", color: "#D2691E" },
-]
-
-const preciosPorCantidad = [
-  { cantidad: "10-24", descuento: "10%" },
-  { cantidad: "25-49", descuento: "15%" },
-  { cantidad: "50+", descuento: "20%" },
+  { 
+    id: 1, 
+    nombre: "Luna Miel", 
+    aroma: "Miel y Lavanda", 
+    precio: 2500, 
+    taille: "Grande", 
+    descripcion: "Vela de soja con esencia de miel orgánica y lavanda francesa",
+    color: "#F5DEB3",
+    imagen: "https://images.unsplash.com/photo-1602607203242-17c9dfa4c0f6?w=400&h=400&fit=crop"
+  },
+  { 
+    id: 2, 
+    nombre: "Bosque Encantado", 
+    aroma: "Pino y Eucalipto", 
+    precio: 2200, 
+    taille: "Mediana", 
+    descripcion: "Aromas frescos del bosque patagónico",
+    color: "#228B22",
+    imagen: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=400&fit=crop"
+  },
+  { 
+    id: 3, 
+    nombre: "Noche de Verano", 
+    aroma: "Jazmín y Gardenia", 
+    precio: 2800, 
+    taille: "Grande", 
+    descripcion: "Fragancia floral intensa para noches memorables",
+    color: "#FFB6C1",
+    imagen: "https://images.unsplash.com/photo-1608181831718-2501c55c8e7e?w=400&h=400&fit=crop"
+  },
+  { 
+    id: 4, 
+    nombre: "Café Vainilla", 
+    aroma: "Café y Vainilla", 
+    precio: 2100, 
+    taille: "Chica", 
+    descripcion: "Combinación acogedora de café recién molido",
+    color: "#8B4513",
+    imagen: "https://images.unsplash.com/photo-1603006905393-c7da8488d6c8?w=400&h=400&fit=crop"
+  },
+  { 
+    id: 5, 
+    nombre: "Cítricos Frescos", 
+    aroma: "Limón y Naranja", 
+    precio: 1800, 
+    taille: "Chica", 
+    descripcion: "Refrescante mezcla cítrica revitalizante",
+    color: "#FFD700",
+    imagen: "https://images.unsplash.com/photo-1608581728943-9305d5e3c8c8?w=400&h=400&fit=crop"
+  },
+  { 
+    id: 6, 
+    nombre: "Veladora Calmada", 
+    aroma: "Sándalo y Mirra", 
+    precio: 3500, 
+    taille: "XL", 
+    descripcion: "Vela premium para meditación y relajación",
+    color: "#D2691E",
+    imagen: "https://images.unsplash.com/photo-1603006905003-be475563bc59?w=400&h=400&fit=crop"
+  },
 ]
 
 const appHTML = `
-  <header class="header">
-    <div class="logo">🕯️ Velas Essencias</div>
-    <nav class="nav">
-      <a href="#productos">Productos</a>
-      <a href="#catalogo">Catálogo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+  <header class="insta-header">
+    <div class="insta-logo">VelaMor</div>
+    <div class="insta-icons">
+      <span>❤️</span>
+      <span>💬</span>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Velas Aromáticas<br>Handmade</h1>
-      <p class="subtitle">Creamos experiencias olfativas únicas para tu hogar</p>
-      <a href="#catalogo" class="btn-primary">Ver Catálogo</a>
+  <div class="stories">
+    <div class="story-ring">
+      <div class="story-avatar">🕯️</div>
+      <span>Nuevo</span>
     </div>
-    <div class="hero-visual">
-      <div class="flame">🔥</div>
-    </div>
-  </section>
+    ${velas.slice(0, 5).map(vela => `
+      <div class="story-ring">
+        <div class="story-avatar" style="background: ${vela.color}">${vela.nombre[0]}</div>
+        <span>${vela.nombre.split(' ')[0]}</span>
+      </div>
+    `).join('')}
+  </div>
 
-  <section id="productos" class="section">
-    <h2>¿Por qué elegirnos?</h2>
-    <div class="features">
-      <div class="feature-card">
-        <div class="feature-icon">🌿</div>
-        <h3>100% Natural</h3>
-        <p>Fabricadas con cera de soja orgánica y aceites esenciales puros</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">⏱️</div>
-        <h3>Larga Duración</h3>
-        <p>Hasta 50 horas de aroma continuo</p>
-      </div>
-      <div class="feature-card">
-        <div class="feature-icon">🎁</div>
-        <h3> Packaging Premium</h3>
-        <p>Presentaciones perfectas para regalos</p>
-      </div>
-    </div>
-  </section>
-
-  <section id="catalogo" class="section alt">
-    <h2>Nuestro Catálogo</h2>
-    <div class="catalogo-grid">
-      ${velas.map(vela => `
-        <div class="product-card" style="--color: ${vela.color}">
-          <div class="product-image">
-            <div class="candle">🕯️</div>
+  <main class="feed">
+    ${velas.map(vela => `
+      <article class="post">
+        <div class="post-header">
+          <div class="post-avatar" style="background: ${vela.color}">${vela.nombre[0]}</div>
+          <div class="post-user">
+            <strong>velamor_ccs</strong>
+            <span>${vela.taille}</span>
           </div>
-          <h3>${vela.nombre}</h3>
-          <p class="aroma">${vela.aroma}</p>
-          <p class="descripcion">${vela.descripcion}</p>
-          <div class="product-meta">
-            <span class="taille">${vela.taille}</span>
-            <span class="precio">$${vela.precio.toLocaleString()}</span>
+          <span class="post-more">•••</span>
+        </div>
+        <div class="post-image">
+          <img src="${vela.imagen}" alt="${vela.nombre}" />
+          <div class="post-flame">🕯️</div>
+        </div>
+        <div class="post-actions">
+          <div class="post-actions-left">
+            <span>❤️</span>
+            <span>💬</span>
+            <span>🚀</span>
           </div>
-          <button class="btn-secondary" onclick="window.open('https://wa.me/5491112345678?text=Hola!%20Quiero%20comprar%20${encodeURIComponent(vela.nombre)}', '_blank')">
-            Comprar 💬
-          </button>
+          <span>🔖</span>
         </div>
-      `).join('')}
-    </div>
-  </section>
-
-  <section class="section">
-    <h2>Descuentos por Cantidad</h2>
-    <div class="discounts">
-      ${preciosPorCantidad.map(item => `
-        <div class="discount-card">
-          <div class="discount-amount">${item.descuento}</div>
-          <div class="discount-range">${item.cantidad} unidades</div>
+        <div class="post-likes">${Math.floor(Math.random() * 500) + 50} gusta</div>
+        <div class="post-caption">
+          <strong>velamor_ccs</strong> ${vela.nombre} - ${vela.aroma}
+          <p>${vela.descripcion}</p>
+          <span class="post-price">$${vela.precio.toLocaleString()}</span>
         </div>
-      `).join('')}
-    </div>
-  </section>
+        <button class="btn-comprar" onclick="window.open('https://wa.me/5491112345678?text=Hola!%20Quiero%20comprar%20${encodeURIComponent(vela.nombre)}', '_blank')">
+          Comprar ahora 💬
+        </button>
+      </article>
+    `).join('')}
+  </main>
 
-  <section id="contacto" class="section alt">
-    <h2>¡Hace tu pedido!</h2>
-    <p class="contact-text">Escríbenos por WhatsApp para realizar tu pedido o consultar</p>
-    <a href="https://wa.me/5491112345678?text=Hola!%20Quiero%20información%20sobre%20las%20velas" class="btn-whatsapp">
-      💬 Escribinos por WhatsApp
-    </a>
-  </section>
-
-  <footer class="footer">
-    <p>© 2026 Velas Essencias - Handmade con ❤</p>
-  </footer>
+  <nav class="insta-nav">
+    <span>🏠</span>
+    <span>🔍</span>
+    <span>➕</span>
+    <span>🎬</span>
+    <span>👤</span>
+  </nav>
 `
 
 document.querySelector<HTMLDivElement>('#app')!.innerHTML = appHTML
